@@ -1,0 +1,14 @@
+<h1>家計簿</h1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<%= form_with model: @balance_management, url: balance_managements_path do |f| %>
+  <h3>金額</h3>
+  <%= f.number_field :price %>
+  <h3>商品名やお店の名前</h3>
+  <%= f.text_field :name %>
+  <h3>メモ</h3>
+  <%= f.text_area :description %>
+  <%= f.submit "Create" %>
+  <button type="button" class="btn btn-info">作成</button>
+<% end %>
+
+<%= link_to "Back", balance_managements_path %>
